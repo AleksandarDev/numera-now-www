@@ -1,101 +1,75 @@
-import Image from "next/image";
+import { Button } from '@signalco/ui-primitives/button'
+import { BarChart3, PieChart, TrendingUp, LineChart } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* Hero Section */}
+      <section className="py-20">
+        <div className="container mx-auto text-center px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Your numbers - now</h1>
+          <p className="text-xl mb-8 text-neutral-400">Track and analyze your finance and numbers - no effort</p>
+          <Button size="lg" variant="outlined" href="https://app.numera.now">
+            Get Started - It&apos;s Free
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </section>
+
+      {/* Divider */}
+      <div className="h-2 w-full [background-image:radial-gradient(ellipse_farthest-side_at_center_100%,_rgba(85,85,85,1)_0%,_rgba(0,0,0,1)_100%)]"></div>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <FeatureItem
+              icon={<BarChart3 className="w-10 h-10" />}
+              title="Easy Tracking"
+              description="Log your expenses and income with our intuitive interface"
+            />
+            <FeatureItem
+              icon={<LineChart className="w-10 h-10" />}
+              title="Smart Analysis"
+              description="Get AI-powered insights about your spending patterns"
+            />
+            <FeatureItem
+              icon={<PieChart className="w-10 h-10" />}
+              title="Visual Reports"
+              description="See your financial health with comprehensive charts"
+            />
+            <FeatureItem
+              icon={<TrendingUp className="w-10 h-10" />}
+              title="Growth Tracking"
+              description="Monitor your financial progress over time"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="h-2 [background-image:radial-gradient(ellipse_farthest-side_at_center_0%,_rgba(85,85,85,1)_0%,_rgba(0,0,0,0)_100%)]"></div>
+
+      {/* Call to Action Section */}
+      <section className="py-20">
+        <div className="container mx-auto text-center px-4">
+          <h2 className="text-3xl font-bold mb-6">Ready to Take Control?</h2>
+          <p className="text-xl mb-8 text-neutral-400">Join thousands of users who trust Numera with their financial tracking.</p>
+          <Button size="lg" variant="outlined" href="https://app.numera.now">
+            Start Using Numera
+          </Button>
+        </div>
+      </section>
+    </>
+  )
 }
+
+function FeatureItem({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+  return (
+    <div className="flex flex-col items-start">
+      <div className="mb-4 text-neutral-100">{icon}</div>
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-neutral-400 text-sm leading-relaxed">{description}</p>
+    </div>
+  )
+}
+
