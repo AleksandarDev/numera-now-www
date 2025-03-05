@@ -1,7 +1,7 @@
 import { Typography } from "@signalco/ui-primitives/Typography";
 import {
   Accordion,
-} from "@signalco/ui/accordion";
+} from "@signalco/ui/Accordion";
 
 export default function FAQ() {
   return (

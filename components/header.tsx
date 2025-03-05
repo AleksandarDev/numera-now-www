@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button } from '@signalco/ui-primitives/button'
+import { Button } from '@signalco/ui-primitives/Button'
 
 export default function Header() {
   return (

@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { showNotification  } from '@signalco/ui-notifications';
-import { Button } from '@signalco/ui-primitives/button'
-import { Input } from '@signalco/ui-primitives/input'
+import { Button } from '@signalco/ui-primitives/Button'
+import { Input } from '@signalco/ui-primitives/Input'
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)

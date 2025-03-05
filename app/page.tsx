@@ -1,4 +1,4 @@
-import { Button } from '@signalco/ui-primitives/button'
+import { Button } from '@signalco/ui-primitives/Button'
 import { BarChart3, PieChart, TrendingUp, LineChart } from 'lucide-react'
 
 export default function Home() {
