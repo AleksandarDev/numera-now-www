@@ -15,9 +15,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="h-2 w-full [background-image:radial-gradient(ellipse_farthest-side_at_center_100%,_rgba(85,85,85,1)_0%,_rgba(0,0,0,1)_100%)]"></div>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -46,9 +43,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="h-2 [background-image:radial-gradient(ellipse_farthest-side_at_center_0%,_rgba(85,85,85,1)_0%,_rgba(0,0,0,0)_100%)]"></div>
-
       {/* Call to Action Section */}
       <section className="py-20">
         <div className="container mx-auto text-center px-4">
@@ -66,7 +60,7 @@ export default function Home() {
 function FeatureItem({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
     <div className="flex flex-col items-start">
-      <div className="mb-4 text-neutral-100">{icon}</div>
+      <div className="mb-4 text-foreground">{icon}</div>
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
       <p className="text-neutral-400 text-sm leading-relaxed">{description}</p>
     </div>

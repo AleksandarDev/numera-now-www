@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center space-x-2">
             <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd" d="M13.2798 2.77617L30.8798 31.5762V7.68003H34.7198V45.2239L17.1198 16.4239V40.32H13.2798V2.77617Z" fill="white"/>
+              <path fillRule="evenodd" clipRule="evenodd" d="M13.2798 2.77617L30.8798 31.5762V7.68003H34.7198V45.2239L17.1198 16.4239V40.32H13.2798V2.77617Z" className="fill-foreground"/>
             </svg>
             <span className="font-semibold">Numera</span>
           </div>
